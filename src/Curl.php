@@ -33,11 +33,13 @@ class Curl
 
         $this->cUrl = $cUrl;
 
-        $this->setOptions($options);
+        if (! empty($options)) {
+            $this->setOptions($options);
+        }
     }
 
     /**
-     * Закрывает сеанс.
+     * Деструктор.
      */
     public function __destruct()
     {
@@ -47,7 +49,7 @@ class Curl
     # # # #
 
     /**
-     * Завершает сеанс cUrl.
+     * Завершает сеанс.
      *
      * [^ PHP 8.0] Использование метода больше не имеет смысла.
      *
