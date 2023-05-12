@@ -1,4 +1,4 @@
-## Curl Wrapper 0.1.0
+## Curl Wrapper 0.1.1
 
 ##### Требования:
 + `PHP >= 8.0`
