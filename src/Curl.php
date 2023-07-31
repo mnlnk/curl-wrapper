@@ -23,7 +23,7 @@ class Curl
      *
      * @throws CurlException
      */
-    public function __construct(?string $url = null, array $options = [])
+    public function __construct(?string $url = null, array $options = array())
     {
         $cUrl = $this->init($url);
 
@@ -81,7 +81,7 @@ class Curl
      *
      * @return int
      */
-    public function errno() : int
+    public function errno(): int
     {
         return curl_errno($this->cUrl);
     }
@@ -93,7 +93,7 @@ class Curl
      *
      * @return string
      */
-    public function error() : string
+    public function error(): string
     {
         return curl_error($this->cUrl);
     }
@@ -107,7 +107,7 @@ class Curl
      *
      * @return string|bool
      */
-    public function escape(string $string) : string|bool
+    public function escape(string $string): string|bool
     {
         return curl_escape($this->cUrl, $string);
     }
@@ -153,7 +153,7 @@ class Curl
     }
 
     /**
-     * Приостановливает и возобновляет соединение.
+     * Приостанавливает и возобновляет соединение.
      *
      * @link https://www.php.net/manual/ru/function.curl-pause.php
      *
@@ -167,7 +167,7 @@ class Curl
     }
 
     /**
-     * Сбросывает все настройки обработчика сессии libcurl.
+     * Сбрасывает все настройки обработчика сессии "libcurl".
      *
      * @link https://www.php.net/manual/ru/function.curl-reset.php
      *
